@@ -1,0 +1,177 @@
+name: Bug Report
+description: Report a bug, crash, progression issue, or other problem with RiftlineRPG.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue with RiftlineRPG!
+
+        Please fill out the information below as accurately as possible. The more information provided, the easier it is to reproduce and fix the problem.
+
+        For general questions or help that may not be a bug, please use the RiftlineRPG Discord support channel instead.
+
+  - type: input
+    id: pack-version
+    attributes:
+      label: RiftlineRPG Version
+      description: What version of RiftlineRPG are you playing?
+      placeholder: "Example: 1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where did the issue occur?
+      options:
+        - Singleplayer
+        - Multiplayer - LAN
+        - Multiplayer - Dedicated Server
+        - Multiplayer - Hosted Server
+        - Not Sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of Issue
+      description: Choose the option that best describes the problem.
+      options:
+        - Crash
+        - Quest / Progression
+        - Boss / Mob
+        - Item / Equipment
+        - Magic / Ability
+        - World Generation / Structure
+        - Performance / Lag
+        - Multiplayer / Server
+        - Visual / UI
+        - Recipe / Crafting
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you were doing when it occurred.
+      placeholder: |
+        Explain what happened in as much detail as possible.
+
+        Example:
+        After defeating the boss, the quest did not complete and the required relic did not drop.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Explain what should have happened instead.
+      placeholder: "Example: The quest should complete and the boss should drop the required relic."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps needed to make the issue happen again.
+      placeholder: |
+        1. Enter...
+        2. Use...
+        3. Defeat...
+        4. The issue occurs...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Happened once
+        - Unable to reproduce
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modified
+    attributes:
+      label: Have you modified the modpack?
+      description: This includes adding, removing, or updating mods, configs, resource packs, or datapacks.
+      options:
+        - "No - I am using the pack as provided"
+        - "Yes"
+    validations:
+      required: true
+
+  - type: textarea
+    id: modifications
+    attributes:
+      label: Modifications
+      description: If you modified the pack, list everything you changed. If not, write "None."
+      placeholder: |
+        Example:
+        Added:
+        - Mod Name
+
+        Updated:
+        - Mod Name from version X to version Y
+
+        Removed:
+        - Mod Name
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Crash Report
+      description: |
+        If this is a crash, performance issue, or technical problem, attach your latest.log and crash report here.
+
+        You can drag and drop the files directly into this box.
+      placeholder: "Drag and drop latest.log, crash reports, or other relevant files here."
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Video
+      description: Add screenshots or video if they help show the issue. You can drag and drop images directly into this box.
+      placeholder: "Drag and drop screenshots here."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      description: Add anything else that may help reproduce or understand the problem.
+      placeholder: "Anything else we should know?"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before Submitting
+      options:
+        - label: I have searched existing issues to make sure this has not already been reported.
+          required: true
+        - label: I am using the RiftlineRPG version listed above.
+          required: true
+        - label: I have listed any changes I made to the modpack.
+          required: true
+        - label: I understand that issues caused by unsupported modifications to the pack may not be fixable by the RiftlineRPG team.
+          required: true
